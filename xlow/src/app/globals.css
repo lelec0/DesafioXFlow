@@ -1,5 +1,8 @@
 :root {
   --border-radius: 12px;
+  --logo-color: #5d5d6d;
+  --support-text: #737380;
+  --background-a: #f3f5f6;
 }
 
 * {
