@@ -55,6 +55,16 @@ export function MiddleBar() {
     return blocks;
   };
 
+  const renderProductCount = () => {
+    if (productCount === 0) {
+      return "Nenhum produto encontrado";
+    } else if (productCount === 1) {
+      return "1 produto";
+    } else {
+      return `${productCount} produtos`;
+    }
+  };
+
   return (
     <>
       <MiddleBarContainer>
@@ -63,7 +73,7 @@ export function MiddleBar() {
           {renderBlocks()}
         </BlockCount>
       </MiddleBarContainer>
-      <ProductsCountDisplay>{productCount} produtos</ProductsCountDisplay>
+      <ProductsCountDisplay>{renderProductCount()}</ProductsCountDisplay>
     </>
   );
 }
