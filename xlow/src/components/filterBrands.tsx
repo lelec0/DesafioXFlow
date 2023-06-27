@@ -1,7 +1,8 @@
 "use client";
 
+import { FilterContext } from "@/contexts/filter-contexts";
 import { FilterTypeBrands } from "@/types/filter-brands";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { styled } from "styled-components";
 
 interface FilterBrandsProps {
@@ -32,8 +33,8 @@ const FilterItem = styled.li<FilterBrandsProps>`
 `;
 
 export function FilterBrands(props: FilterBrandsProps) {
-  //const { type, setType } = useFilterContext();
-  const [type, setType] = useState(FilterTypeBrands.ALL);
+  const { type, setType } = useContext(FilterContext);
+  //const [type, setType] = useState(FilterTypeBrands.ALL);
 
   const handleChangeType = (value: FilterTypeBrands) => {
     setType(value);
