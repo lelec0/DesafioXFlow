@@ -22,7 +22,7 @@ export function FilterContextProvider({ children }: ProviderProps) {
   const [search, setSearch] = useState("");
   const [type, setType] = useState(FilterTypeBrands.ALL);
   const [productCount, setProductCount] = useState(0);
-  const [productsOnLine, setProductsOnLine] = useState(0);
+  const [productsOnLine, setProductsOnLine] = useState(4);
 
   return (
     <FilterContext.Provider
