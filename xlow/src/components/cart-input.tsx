@@ -19,11 +19,13 @@ const CartNumber = styled.span`
 `;
 
 export function CartInput() {
-  const { value } = useLocalStorage("cart-items");
+  const localStorageHook = useLocalStorage<string[]>("cart-items", []);
+  const value = localStorageHook.value;
+
   return (
     <CartContainer>
-      <CartIcon />
-      {value.length && <CartNumber>{value.length}</CartNumber>}
+      <CartIcon></CartIcon>
+      {<CartNumber>{value.length}</CartNumber>}
     </CartContainer>
   );
 }
