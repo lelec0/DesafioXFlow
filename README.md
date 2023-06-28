@@ -1,7 +1,7 @@
 # DesafioXFlow - App de Vitrine
 É um app simples de vitrine, que usa a API da XLOW liberada para o desafio.
 
-![Texto alternativo](https://i.imgur.com/S86G2PU.png)
+![Texto alternativo](https://imgur.com/9P2UI2p)
 ## Tecnologias
 - React
 - ContextAPi
