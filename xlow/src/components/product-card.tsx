@@ -49,11 +49,10 @@ const Card = styled.div`
   }
 
   h3 {
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 150%;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 100%;
     color: var(--text-dark-2);
-    height: 100%;
   }
 
   p {
@@ -84,7 +83,7 @@ const cardHeight2 = `calc(${cardHeight} * 0.3)`;
 const SecondImageWrapper = styled.div`
   display: flex;
   justify-content: center;
-
+  margin-top: 10px;
   img {
     width: ${cardWidth2};
     height: ${cardHeight2};
