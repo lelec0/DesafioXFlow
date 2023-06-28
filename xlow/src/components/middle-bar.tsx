@@ -67,7 +67,9 @@ export function MiddleBar() {
     } else if (larguraDaJanela < 1200) {
       maxSize = 4;
     }
-
+    if (maxSize > productCount) {
+      maxSize = productCount;
+    }
     if (newProductsOnLine > maxSize) {
       newProductsOnLine = 1;
     }
@@ -101,6 +103,9 @@ export function MiddleBar() {
         maxBlocks = 4;
         setProductsOnLine(4);
       }
+    }
+    if (maxBlocks > productCount) {
+      maxBlocks = productCount;
     }
     const blocks = [];
 
