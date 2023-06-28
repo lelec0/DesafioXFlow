@@ -103,7 +103,6 @@ export function ProductCard(props: ProductCardProps) {
 
   const oneProductHandle = async (id: number) => {
     const response = await requestProductListById(id);
-    console.log(response);
     setSelectedProduct(response);
   };
 

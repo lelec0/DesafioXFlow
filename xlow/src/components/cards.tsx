@@ -18,6 +18,25 @@ export function Cards() {
     setProductsOnLine,
     setDatabaseProducts,
   } = useContext(FilterContext);
+  //console.log(window.innerWidth);
+
+  if (window.innerWidth < 440) {
+    if (productsOnLine > 1) {
+      setProductsOnLine(1);
+    }
+  } else if (window.innerWidth < 700) {
+    if (productsOnLine > 2) {
+      setProductsOnLine(2);
+    }
+  } else if (window.innerWidth < 910) {
+    if (productsOnLine > 3) {
+      setProductsOnLine(3);
+    }
+  } else if (window.innerWidth < 1200) {
+    if (productsOnLine > 4) {
+      setProductsOnLine(4);
+    }
+  }
 
   const ListContainer = styled.div`
     display: grid;
