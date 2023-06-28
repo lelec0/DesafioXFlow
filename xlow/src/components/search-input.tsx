@@ -1,7 +1,9 @@
+import { useContext, useDeferredValue } from "react";
 import { styled } from "styled-components";
 import { SearchIcon } from "./Icons/searchIcon";
+import { FilterContext } from "@/contexts/filter-contexts";
 
-export const SearchInput = styled.input`
+const SearchInput = styled.input`
   width: 352px;
   border-radius: 8px;
 
@@ -26,10 +28,20 @@ const SearchInputContainer = styled.div`
     top: 10px;
   }
 `;
+
 export function SearchInputWithIcon() {
+  const { setSearch } = useContext(FilterContext);
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(event.target.value);
+  };
+
+  // considerar ultilizar o deferredValue por timeOut
+  //const deferredValue = useDeferredValue("");
+
   return (
     <SearchInputContainer>
-      <SearchInput placeholder="Locking For Something?" />
+      <SearchInput placeholder="Procurando por algo?" onChange={handleChange} />
       <SearchIcon />
     </SearchInputContainer>
   );

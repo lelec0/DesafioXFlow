@@ -27,8 +27,8 @@ interface Image {
   imageText: string;
 }
 
-const cardWidth = "256px";
-const cardHeight = "300px";
+const cardWidth = "200px";
+const cardHeight = `calc(${cardWidth} * 1.15)`;
 
 const Card = styled.div`
   display: flex;
@@ -41,7 +41,7 @@ const Card = styled.div`
   backdrop-filter: blur(10px);
   border-radius: 0px 0px 4px 4px;
 
-  width: ${cardWidth};
+  width: 100%;
 
   img {
     width: ${cardWidth};
@@ -53,15 +53,7 @@ const Card = styled.div`
     font-size: 16px;
     line-height: 150%;
     color: var(--text-dark-2);
-    height: 45px;
-    margin-bot: 10px;
-  }
-
-  .second-image-wrapper {
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    margin-right: 5px;
+    height: 100%;
   }
 
   p {
@@ -80,7 +72,7 @@ const CardButton = styled.div`
   background-color: white;
   border: 1px solid brown;
   border-radius: 4px; /* Adiciona a propriedade border-radius */
-  padding: 10px 20px;
+  padding: 10px 10px;
   font-size: 14px;
   color: black;
   cursor: pointer;
@@ -92,7 +84,6 @@ const cardHeight2 = `calc(${cardHeight} * 0.3)`;
 const SecondImageWrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 10px;
 
   img {
     width: ${cardWidth2};

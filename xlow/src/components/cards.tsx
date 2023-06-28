@@ -7,19 +7,24 @@ import styled from "styled-components";
 import { ProductCard } from "./product-card";
 import { FilterTypeBrands } from "@/types/filter-brands";
 
-const ListContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 256px);
-  grid-gap: 32px;
-  max-width: 100%;
-
-  margin-top: 32px;
-`;
 export function Cards() {
   const [productList, setProductList] = useState<any[]>([]);
   const [baseList, setBaseList] = useState<any[]>([]);
-  const { type, setProductCount, setProductsOnLine, setDatabaseProducts } =
-    useContext(FilterContext);
+  const {
+    type,
+    search,
+    setProductCount,
+    productsOnLine,
+    setProductsOnLine,
+    setDatabaseProducts,
+  } = useContext(FilterContext);
+
+  const ListContainer = styled.div`
+    display: grid;
+    grid-template-columns: repeat(${productsOnLine}, 1fr);
+    grid-gap: 32px;
+    margin-top: 32px;
+  `;
 
   useEffect(() => {
     const handleProductList = async () => {
@@ -55,10 +60,21 @@ export function Cards() {
       setProductCount(response3.length);
     }
   }, [baseList, setProductCount, setProductsOnLine, type]);
+  let filteredProducts = [];
+  if (productList) {
+    filteredProducts = productList.filter((product) => {
+      const productName = product.productName
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+      return productName.includes(search);
+    });
+    setProductCount(filteredProducts.length);
+  }
 
   return (
-    <ListContainer>
-      {productList.map((product) => (
+    <ListContainer className="cardFofinhos">
+      {filteredProducts.map((product) => (
         <ProductCard
           key={product.productId}
           productId={product.productId}
