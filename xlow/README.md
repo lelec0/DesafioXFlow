@@ -1,14 +1,7 @@
 ## App de Vitrine
-É um app simples de vitrine, que usa a API liberada para o desafio.
+É um app simples de vitrine, que usa a API da XLOW liberada para o desafio.
 
-
-<div style="width: 1024px">
-  <div style="display: flex" align="center">
-    <img src="https://imgur.com/S86G2PU" alt="aplicação" width="350px" height="500px" >
-  </div>
-</div>
-
-
+![Texto alternativo](https://i.imgur.com/S86G2PU.png)
 ## Tecnologias
 - React
 - ContextAPi
