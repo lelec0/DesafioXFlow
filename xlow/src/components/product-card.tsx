@@ -54,6 +54,7 @@ const Card = styled.div`
     line-height: 100%;
     height: 25px;
     color: var(--text-dark-2);
+    height: 25px;
   }
 
   p {
