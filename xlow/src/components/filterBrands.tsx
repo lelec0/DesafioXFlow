@@ -15,6 +15,10 @@ const FilterList = styled.ul`
   justify-content: center;
   gap: 40px;
   list-style: none;
+
+  @media (max-width: 770px) {
+    gap: 10px;
+  }
 `;
 
 const FilterItem = styled.li<FilterBrandsProps>`
@@ -30,6 +34,11 @@ const FilterItem = styled.li<FilterBrandsProps>`
 
   border-bottom: ${(props) =>
     props.selected ? "4px solid var(--select-orange)" : ""};
+
+  @media (max-width: 770px) {
+    font-size: 14px;
+    line-height: 20px;
+  }
 `;
 
 export function FilterBrands(props: FilterBrandsProps) {

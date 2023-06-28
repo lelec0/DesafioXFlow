@@ -22,6 +22,10 @@ const HeaderTag = styled.header`
     justify-content: center;
     gap: 24px;
   }
+
+  @media (max-width: 870px) {
+    padding: 12px 24px;
+  }
 `;
 
 const LogoTag = styled.a`
@@ -29,6 +33,10 @@ const LogoTag = styled.a`
   font-weight: 400;
   font-size: 40px;
   line-height: 150%;
+
+  @media (max-width: 870px) {
+    font-size: 30px;
+  }
 `;
 
 interface HeaderProps {}

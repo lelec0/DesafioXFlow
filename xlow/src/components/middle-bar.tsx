@@ -11,6 +11,11 @@ const MiddleBarContainer = styled.div`
   width: 100%;
   align-items: start;
   justify-content: space-between;
+  @media (max-width: 770px) {
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 20px;
+  }
 `;
 
 const BlockContainer = styled.div`
@@ -24,6 +29,10 @@ const ProductsCountDisplay = styled.div`
 `;
 
 const BlockCount = styled.div`
+  cursor: pointer;
+`;
+
+const BigContainer = styled.div`
   cursor: pointer;
 `;
 

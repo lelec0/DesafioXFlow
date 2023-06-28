@@ -4,7 +4,7 @@ import { SearchIcon } from "./Icons/searchIcon";
 import { FilterContext } from "@/contexts/filter-contexts";
 
 const SearchInput = styled.input`
-  width: 352px;
+  width: 100%;
   border-radius: 8px;
 
   padding: 10px 16px;
@@ -16,6 +16,11 @@ const SearchInput = styled.input`
   font-size: 14px;
   line-height: 22px;
   color: var(--support-text);
+
+  @media (max-width: 570px) {
+    font-size: 11px;
+    line-height: 18px;
+  }
 `;
 
 const SearchInputContainer = styled.div`
@@ -26,6 +31,17 @@ const SearchInputContainer = styled.div`
     position: absolute;
     right: 30px;
     top: 10px;
+  }
+
+  @media (max-width: 570px) {
+    width: 152px;
+
+    svg {
+      position: absolute;
+      right: 5px;
+      top: 10px;
+      width: 100%px;
+    }
   }
 `;
 
