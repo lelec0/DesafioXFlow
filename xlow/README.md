@@ -9,6 +9,7 @@
 - HTML
 - CSS
 - NextJS
+- TypeScript
 
 
 ## Instalação
