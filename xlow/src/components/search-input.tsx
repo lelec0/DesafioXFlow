@@ -4,10 +4,10 @@ import { SearchIcon } from "./Icons/searchIcon";
 export const SearchInput = styled.input`
   width: 352px;
   border-radius: 8px;
-  border: none;
+
   padding: 10px 16px;
 
-  background-color: var(--background-a);
+  background-color: white;
 
   font-family: inherit;
   font-weight: 400;

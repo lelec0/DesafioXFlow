@@ -34,7 +34,6 @@ const FilterItem = styled.li<FilterBrandsProps>`
 
 export function FilterBrands(props: FilterBrandsProps) {
   const { type, setType } = useContext(FilterContext);
-  //const [type, setType] = useState(FilterTypeBrands.ALL);
 
   const handleChangeType = (value: FilterTypeBrands) => {
     setType(value);

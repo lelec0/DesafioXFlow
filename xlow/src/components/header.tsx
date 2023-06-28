@@ -14,6 +14,7 @@ const HeaderTag = styled.header`
   align-items: center;
   justify-content: space-between;
   padding: 20px 160px;
+  background-color: var(--background-a);
 
   > div {
     display: flex;
@@ -24,7 +25,7 @@ const HeaderTag = styled.header`
 `;
 
 const LogoTag = styled.a`
-  color: var(--logo-color);
+  color: var(--select-orange);
   font-weight: 400;
   font-size: 40px;
   line-height: 150%;

@@ -1,4 +1,5 @@
-import { useLocalStorage } from "@/hooks/useLocalStorage";
+import { FilterContext } from "@/contexts/filter-contexts";
+import { useContext } from "react";
 import { styled } from "styled-components";
 import { CartIcon } from "./Icons/cartIcon";
 
@@ -19,13 +20,11 @@ const CartNumber = styled.span`
 `;
 
 export function CartInput() {
-  const localStorageHook = useLocalStorage<string[]>("cart-items", []);
-  const value = localStorageHook.value;
-
+  const { shoppingList } = useContext(FilterContext);
   return (
     <CartContainer>
       <CartIcon></CartIcon>
-      {<CartNumber>{value.length}</CartNumber>}
+      {<CartNumber>{shoppingList.length}</CartNumber>}
     </CartContainer>
   );
 }
